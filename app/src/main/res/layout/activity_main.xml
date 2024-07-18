@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCF4FF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="0dp"
+
+        android:gravity="end"
+        android:textSize="50sp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:background="#D796FA"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-3dp"
+        android:background="#FCF4FF"
+        android:columnCount="5"
+        android:rowCount="4">
+
+        <!-- Row 1 -->
+        <!-- Inside the GridLayout, add a new button for 'X' (clear current input) -->
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:text="X"
+            android:onClick="onClearCurrentOperationClick"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#FF0000"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="205dp"
+            android:layout_columnSpan="4"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/button_onoff_indicator_on"
+            android:onClick="onClearClick"
+
+            android:text="C"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_columnSpan="2"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="107dp"
+            android:layout_columnSpan="2"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="76dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onOperatorClick"
+            android:text="/"
+            android:textColor="#00FFFF"
+            android:textSize="25sp" />
+
+
+        <!-- Row 2 -->
+
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="76dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="6"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="75dp"
+            android:layout_margin="5dp"
+            android:background="#000000"
+            android:onClick="onOperatorClick"
+            android:text="*"
+            android:textColor="#00FFFF"
+            android:textSize="20sp" />
+
+        <!-- Row 3 -->
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="107dp"
+            android:layout_columnSpan="2"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="76dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onOperatorClick"
+            android:text="-"
+            android:textColor="#00FFFF"
+            android:textSize="20sp" />
+
+        <!-- Row 4 -->
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="107dp"
+            android:layout_columnSpan="2"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onNumberClick"
+            android:text="."
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="78dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onOperatorClick"
+            android:text="+"
+            android:textColor="#00FFFF"
+            android:textSize="20sp" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:onClick="onEqualsClick"
+
+            android:text="="
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <!-- Row 5 -->
+        <!-- Inside the GridLayout, add a new button for '%' -->
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="106dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:onClick="onOperatorClick"
+            android:text="%"
+            android:textSize="20sp" />
+
+
+
+
+    </GridLayout>
+
+</RelativeLayout>
